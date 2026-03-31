@@ -17,7 +17,7 @@ VS Code Runtime for this repository :  https://crispy-adventure-5gjqxgxq6jh476r.
 2. **[Codespaces]** 탭을 선택하고, **[Create codespace on main]**을 클릭합니다.
 3. 잠시 기다리면 브라우저 안에 익숙한 **VS Code 화면**이 나타납니다.
 
-### **Step 3: RISC-V 툴체인 설치 (가장 중요 🌟)**
+### **Step 3: RISC-V 툴체인 설치 **
 화면 하단의 **Terminal(터미널)** 창에 다음 명령어를 한 줄씩 복사해서 붙여넣고 엔터를 누르세요. (약 30초 소요)
 
 ```bash
