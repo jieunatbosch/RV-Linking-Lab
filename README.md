@@ -1,6 +1,6 @@
 # RV-Linking-Lab
 
-VS Code Runtime for this repository :  https://crispy-adventure-5gjqxgxq6jh476r.github.dev/ 
+(FYI: My VS Code Runtime for this repository :  https://crispy-adventure-5gjqxgxq6jh476r.github.dev/ )
 
 # [실습 가이드] GitHub Codespaces를 이용한 RISC-V 개발 환경 구축
 
