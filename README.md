@@ -9,17 +9,17 @@ FYI: My Codespace Runtime for this repository :  https://crispy-adventure-5gjqxg
 
 
 ### **Step 1: GitHub 로그인 및 저장소(Repository) 준비**
-1. [GitHub](https://github.com/)에 로그인합니다.
-2. 우측 상단의 **[+]** 아이콘을 누르고 **[New repository]**를 선택합니다.
-3. Repository name에 `RV-Linking-Lab`이라고 입력하고, 하단의 **[Create repository]**를 클릭합니다. (다른 설정은 건드릴 필요 없습니다.)
+1. [GitHub](https://github.com/)에 로그인
+2. 우측 상단의 **[+]** 아이콘을 누르고 **[New repository]**를 선택
+3. Repository name에 `RV-Linking-Lab`이라고 입력하고, 하단의 **[Create repository]**를 클릭 (다른 설정은 건드릴 필요 없습니다.)
 
 ### **Step 2: Codespace 시작하기**
-1. 생성된 저장소 화면에서 초록색 **[<> Code]** 버튼을 클릭합니다.
-2. **[Codespaces]** 탭을 선택하고, **[Create codespace on main]**을 클릭합니다.
-3. 잠시 기다리면 브라우저 안에 익숙한 **VS Code 화면**이 나타납니다.
+1. 생성된 저장소 화면에서 초록색 **[<> Code]** 버튼을 클릭
+2. **[Codespaces]** 탭을 선택하고, **[Create codespace on main]**을 클릭
+3. 잠시 기다리면 브라우저 안에 익숙한 **VS Code 화면**이 나타남
 
 ### **Step 3: RISC-V 툴체인 설치**
-화면 하단의 **Terminal(터미널)** 창에 다음 명령어를 한 줄씩 복사해서 붙여넣고 엔터를 누르세요. (약 30초 소요)
+화면 하단의 **Terminal(터미널)** 창에 다음 명령어를 한 줄씩 복사해서 붙여넣고 엔터키를 쳐서 실행. (약 30초 소요)
 
 ```bash
 # 1. 패키지 목록 업데이트
@@ -29,12 +29,12 @@ sudo apt update
 sudo apt install -y gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
 ```
 
-> **설치 확인:** 터미널에 `riscv64-unknown-elf-gcc --version`을 입력했을 때 버전 정보가 나오면 성공입니다!
+> **설치 확인:** 터미널에 `riscv64-unknown-elf-gcc --version`을 입력했을 때 버전 정보가 나오면 성공!
 
 ---
 
 ### **Step 4: 실습 파일 생성 및 코드 작성**
-좌측 파일 탐색기에서 새 파일을 만들어 아래 코드를 넣으세요.
+VS Code 파일 탐색기 (혹은 다른 에디터 사용) 에서 새 파일을 만들어 아래 코드를 작성.
 
 1. **`main.c` 생성**
    ```c
@@ -87,7 +87,7 @@ riscv64-unknown-elf-objdump -d final_program
 
 ---
 
-### **💡 주의사항**
+### **주의사항**
 * **실습 종료 후:** Codespace는 사용하지 않을 때도 시간을 소모할 수 있습니다. 실습이 끝나면 브라우저 탭을 닫고, GitHub의 Codespaces 관리 페이지에서 **[Stop Codespace]**를 하여 종료. 
 
 ---
