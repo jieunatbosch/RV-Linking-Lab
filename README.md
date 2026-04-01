@@ -1,11 +1,12 @@
 # RV-Linking-Lab
 
-(FYI: My VS Code Runtime for this repository :  https://crispy-adventure-5gjqxgxq6jh476r.github.dev/ )
+VS Code Runtime for this repository :  https://crispy-adventure-5gjqxgxq6jh476r.github.dev/ 
 
 # [실습 가이드] GitHub Codespaces를 이용한 RISC-V 개발 환경 구축
 
-본 실습에서는 클라우드 개발 환경인 **GitHub Codespaces**를 사용하여 RISC-V 컴파일러와 링커를 직접 다뤄봅니다. 
-내 PC에 무거운 프로그램을 설치할 필요가 없으며, 인터넷 브라우저만 있으면 됩니다.
+개인 랩탑에 risc-v toolchain 이 설치 된 경우는 어려운 경우 클라우드 개발 환경인 **GitHub Codespaces**를 사용하여 RISC-V 컴파일러와 링커를 실행. 
+그렇지 않으면 이미 설치된 환경에서 Step 4 부터 실행. 
+
 
 ### **Step 1: GitHub 로그인 및 저장소(Repository) 준비**
 1. [GitHub](https://github.com/)에 로그인합니다.
@@ -17,7 +18,7 @@
 2. **[Codespaces]** 탭을 선택하고, **[Create codespace on main]**을 클릭합니다.
 3. 잠시 기다리면 브라우저 안에 익숙한 **VS Code 화면**이 나타납니다.
 
-### **Step 3: RISC-V 툴체인 설치 **
+### **Step 3: RISC-V 툴체인 설치**
 화면 하단의 **Terminal(터미널)** 창에 다음 명령어를 한 줄씩 복사해서 붙여넣고 엔터를 누르세요. (약 30초 소요)
 
 ```bash
@@ -60,9 +61,7 @@ sudo apt install -y gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
 ---
 
 ### **Step 5: 링킹(Linking) 과정 분석하기 (핵심 명령어)**
-이제 터미널에서 다음 명령어들을 실행하며 링커의 역할을 관찰하세요.
-
-
+터미널에서 다음 명령어들을 실행하며 링커의 역할을 관찰.
 
 #### **① 분할 컴파일 (오브젝트 파일 생성)**
 ```bash
@@ -73,7 +72,7 @@ riscv64-unknown-elf-gcc -c -march=rv32i -mabi=ilp32 main.c math_lib.c
 ```bash
 riscv64-unknown-elf-nm main.o
 ```
-* `sum` 심볼 옆에 **`U` (Undefined)**가 떠 있는지 확인하세요. "아직 주소가 없다"는 뜻입니다.
+* `sum` 심볼 옆에 **`U` (Undefined)**가 떠 있는지 확인. "아직 주소가 없다"는 뜻
 
 #### **③ 최종 링킹 (실행 파일 생성)**
 ```bash
@@ -84,11 +83,12 @@ riscv64-unknown-elf-gcc -nostdlib -march=rv32i -mabi=ilp32 main.o math_lib.o -o 
 ```bash
 riscv64-unknown-elf-objdump -d final_program
 ```
-* `main` 함수 안의 `jal` 명령어가 이제 `sum`의 **실제 주소**를 가리키고 있는지 확인하세요!
+* `main` 함수 안의 `jal` 명령어가 이제 `sum`의 **실제 주소**를 가리키고 있는지 확인!
 
 ---
 
 ### **💡 주의사항**
-* **실습 종료 후:** Codespace는 사용하지 않을 때도 시간을 소모할 수 있습니다. 실습이 끝나면 브라우저 탭을 닫고, GitHub의 Codespaces 관리 페이지에서 **[Stop Codespace]**를 해주는 것이 좋습니다. (무료 시간은 충분하지만 아껴 쓰는 습관!)
+* **실습 종료 후:** Codespace는 사용하지 않을 때도 시간을 소모할 수 있습니다. 실습이 끝나면 브라우저 탭을 닫고, GitHub의 Codespaces 관리 페이지에서 **[Stop Codespace]**를 하여 종료. 
 
 ---
+
